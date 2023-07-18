@@ -8,17 +8,27 @@ namespace Tydzien4Lekcja11ZD
 		{
 			try
 			{
-				var number = GetInt();
+				while (true)
+				{
+					Console.WriteLine("Sprawdzę, czy wprowadzona przez Ciebie liczba jest parzysta.");
 
-				if (IsEven(number))
-				{
+					var number = GetInt();
+
+					if (IsEven(number))
+					{
+						Console.Clear();
+						Console.WriteLine($"Liczba {number} jest liczbą parzystą.");
+					}
+					else
+					{
+						Console.Clear();
+						Console.WriteLine($"Liczba {number} jest liczbą nieparzystą.");
+					}
+
+					Console.Write("Aby sprawdzić koleją liczbę wpisz 'TAK' i zatwierdź enterem, w przeciwnym wypadku wystarczy wcisnąć samo enter: ");
+					if (!(Console.ReadLine().ToUpper() == "TAK"))
+						break;
 					Console.Clear();
-					Console.WriteLine($"Liczba {number} jest liczbą parzystą.");
-				}
-				else
-				{
-					Console.Clear();
-					Console.WriteLine($"Liczba {number} jest liczbą nieparzystą.");
 				}
 			}
 			catch (Exception)
@@ -52,6 +62,7 @@ namespace Tydzien4Lekcja11ZD
 		}
 		static bool IsEven(int number)
 		{
+			if (number == 0) return false;
 			return number % 2 == 0;
 		}
 	}
