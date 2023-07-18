@@ -23,6 +23,7 @@ namespace Tydzien4Lekcja11ZD
 			}
 			catch (Exception)
 			{
+				Console.Clear();
 				Console.WriteLine("Wystąpił nieoczekiwany błąd, program zostanie zamknięty!");
 			}
 			finally
