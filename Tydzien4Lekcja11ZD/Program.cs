@@ -62,7 +62,6 @@ namespace Tydzien4Lekcja11ZD
 		}
 		static bool IsEven(int number)
 		{
-			if (number == 0) return false;
 			return number % 2 == 0;
 		}
 	}
